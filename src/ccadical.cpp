@@ -83,8 +83,8 @@ int ccadical_constraint_failed (CCaDiCaL *wrapper) {
   return ((Wrapper *) wrapper)->solver->constraint_failed ();
 }
 
-void ccadical_set_option (CCaDiCaL *wrapper, const char *name, int val) {
-  ((Wrapper *) wrapper)->solver->set (name, val);
+int ccadical_set_option (CCaDiCaL *wrapper, const char *name, int val) {
+  return ((Wrapper *) wrapper)->solver->set (name, val);
 }
 
 void ccadical_limit (CCaDiCaL *wrapper, const char *name, int val) {
